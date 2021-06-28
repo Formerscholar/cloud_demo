@@ -39,7 +39,7 @@ public class PaymentController {
 	@GetMapping("/get/{id}")
 	public Result<Payment> getPaymentById(@PathVariable("id") Long id) {
 		Payment payment = paymentService.getPaymentById(id);
-		log.info("*****查询结果:{}", payment);
+		log.info("*****O(∩_∩)O查询结果:{}", payment);
 		if (payment != null) {
 			return Result.success(payment);
 		} else {
