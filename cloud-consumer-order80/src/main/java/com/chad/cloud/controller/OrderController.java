@@ -18,7 +18,7 @@ public class OrderController {
 	@Resource
 	private RestTemplate restTemplate;
 
-	@GetMapping("/payment/create")
+	@GetMapping("/payment/create") //客户端用浏览器是get请求，但是底层实质发送post调用服务端8001
 	public Result<Payment> create(Payment payment) {
 		return restTemplate.postForObject(PaymentSrv_URL + "/payment/create", payment, Result.class);
 	}
